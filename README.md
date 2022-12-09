@@ -28,17 +28,16 @@ SNO INT primary key ,
  ![](DataInput.png)
  And run `sqlDataInserter.py`, you'll get a text file output like 
  ```SQL
- insert into P
+insert into P
 ( PNO )
 values
-('15', ),
-
+('15');
 
 insert into S
 ( SNO )
 values
-('10', ),
-('15', ),
-('123', ),
+('10'),
+('15'),
+('123');
 ```
 
