@@ -1,6 +1,7 @@
 # SimpleSQLGenerator
  This repo contains 2 Python scripts to generate simple SQL scripts (`create table`and`insert into`) from easy-to-edit Excel files.
-
+## Requierment
+ Python with module `openpyxl`.  Run `pip install openpyxl` if you don't have it. 
 ## SQLTableCreator
  Quick tool to generate SQL scripts that create tables from database design sheet
 ### Usage
