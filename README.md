@@ -1,9 +1,9 @@
 # SQLTableCreator
  Quick tool to generate simple SQL scripts that create tables from database design sheet
-# Usage
+## Usage
  Put your database design sheet (shaped like the pic below) in the `.py` script directory
- ![](Input.png)
- And run the  `.py` script, you'll get a text file output like 
+ ![](TableInput.png)
+ And run `sqlTableCreator.py`, you'll get a text file output like 
  ```SQL
  create table P
 (
@@ -15,3 +15,27 @@ create table S
 SNO INT primary key ,
 );
 ```
+
+
+# SQLDataInserter
+ Quick tool to generate simple SQL scripts that insert data according to a sheet
+## Usage
+ Put your data sheet (shaped like the pic below) in the `.py` script directory 
+
+ ![](DataInput.png)
+ And run `sqlDataInserter.py`, you'll get a text file output like 
+ ```SQL
+ insert into P
+( PNO )
+values
+('15', ),
+
+
+insert into S
+( SNO )
+values
+('10', ),
+('15', ),
+('123', ),
+```
+

@@ -1,7 +1,7 @@
 from openpyxl import load_workbook
 import os.path
 pwd = os.path.dirname(__file__)
-book = load_workbook(pwd+'\数据.xlsx', data_only=True)
+book = load_workbook(pwd+'\数据示例.xlsx', data_only=True)
 
 IS_MYSQL = False
 res=[]
@@ -11,7 +11,7 @@ for i,sheet in enumerate(book.sheetnames):
     cols= [c for c in next(book[sheet].values)]
     cols=list(filter(None,cols))
     sql+= ', '.join(cols)
-    sql+=')\nvalues\n'
+    sql+=' )\nvalues\n'
     input=[]
 
     for j, row in enumerate(book[sheet].values):
