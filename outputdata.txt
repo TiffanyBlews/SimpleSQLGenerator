@@ -1,0 +1,11 @@
+insert into P
+( PNO )
+values
+('15');
+
+insert into S
+( SNO )
+values
+('10'),
+('15'),
+('123');

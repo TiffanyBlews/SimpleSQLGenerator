@@ -12,7 +12,6 @@ for i,sheet in enumerate(book.sheetnames):
     cols=list(filter(None,cols))
     sql+= ', '.join(cols)
     sql+=' )\nvalues\n'
-    input=[]
 
     for j, row in enumerate(book[sheet].values):
         if j>0 and any(row):
@@ -21,13 +20,11 @@ for i,sheet in enumerate(book.sheetnames):
             for k, cell in enumerate(row):
                 if k>= len(cols):
                     break
-                if cell is not None:
-                    line+='\''+str(cell)+'\', '
-                else:
-                    line+='NULL,'
+                line+='\''+str(cell)+'\'' if cell is not None else 'NULL'
+                line+= ', ' if k<len(cols)-1 else ''
             line+='),\n'
             sql+=line
-    res.append(sql+'\n')
+    res.append(sql[:-2]+';\n')
 
 # print(res)
 with open(pwd+'\outputdata.txt', 'w+', encoding='utf8') as f:
