@@ -18,19 +18,19 @@ for i, sheet in enumerate(book.sheetnames):
 
                 if k in [0, 2] and cell:
                     line += cell + ' '
-                elif k is 1 and cell:
+                elif k == 1 and cell:
                     if IS_MYSQL:
                         line += 'comment \'%s\' ' % cell
-                elif k is 3 and cell is 'Y':
+                elif k == 3 and cell == 'Y':
                     line += 'primary key '
-                elif k is 4 and cell is 'Y' and not line.endswith('primary key '):
+                elif k == 4 and cell == 'Y' and not line.endswith('primary key '):
                     line += 'unique '
-                elif k is 5 and cell is 'N':
+                elif k == 5 and cell == 'N':
                     line += 'not null '
-                elif k is 6:
-                    line += cell if cell is not None else ''
+                elif k == 6:
+                    line += cell if cell != None else ''
                     line += ',\n'
-                if cell is None:
+                if cell == None:
                     continue
         sql += line
     sql += ');\n\n'
