@@ -42,3 +42,6 @@ values
 ('123');
 ```
 
+# Note
+* The order of worksheets MATTERS! Make sure keys with a foreign key constraint is added after its foreign key.
+* The code works, but is ugly. Maybe I'll make it pretty and object-oriented in the future.
