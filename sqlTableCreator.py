@@ -36,7 +36,7 @@ for i, sheet in enumerate(book.sheetnames):
     sql += ');\n\n'
     res.append(sql)
 
-with open(pwd+'\output.txt', 'w+', encoding='utf8') as f:
+with open(pwd+'\output.sql', 'w+', encoding='utf8') as f:
     f.write(''.join(s for s in res))
 
 print("\n\n6\n\n")
